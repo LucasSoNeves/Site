@@ -23,8 +23,15 @@ class Post(models.Model):
     default="rascunho")
 
 
-class Meta:
-    ordering = ('publicado',)
+    class Meta:
+        ordering = ('publicado',)
     
     def __str__(self):
-        return self.title
+        return title
+
+
+"""
+Post.objects.bulk_create([
+    Post(title='testando o shell com bulk,slug='testando-o-shell-com-bulk,content='Testando o shell com bulk,author=user)])
+
+"""

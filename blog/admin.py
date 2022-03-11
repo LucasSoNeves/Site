@@ -2,9 +2,11 @@ from django.contrib import admin
 from .models import Post
 
 @admin.register(Post)
-class PostAdmin(admin.ModelAdmin) :
+class postAdmin(admin.ModelAdmin) :
     list_display = ("title", "author", "publicado", "status")
     list_filter = ("status", "author", "content", "publicado")
+    date_hierarchy = "publicado"
+    raw_id_fields = ("author",)
     search_fields = ("title", "content")
     prepopulated_fields = {"slug": ("title",)}
     
