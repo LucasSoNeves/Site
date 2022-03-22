@@ -56,7 +56,8 @@ ROOT_URLCONF = 'Site_novo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [],
+        'DIRS': ['template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,11 +126,11 @@ MEDIA_ROOT = 'media'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-STATICFILES_DIR = [
-    'statics'
+STATICFILES_DIRS = [
+    'static'
 ]
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
