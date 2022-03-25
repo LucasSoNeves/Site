@@ -1,17 +1,27 @@
 {% extends 'base.html' %}
 {% block title %} Home {% endblock title %}
 {% block content %}
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
     {% for post in object_list %}
-        <div class="post-entry">
-            <h2><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h2>
-            <p> {{ post.content }} </p>
+        <!-- Divider-->
+        <hr class="my-4" />
+        <!-- Post preview-->
+        <div class="post-preview">
+            <a href="{{post.get_absolute_url}}">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <h3 class="post-subtitle">{{ post.title }}</h3>
+            </a>
+            <p class="post-meta">
+                Posted by
+                <a href="#!">Start Bootstrap</a>
+                on July 8, 2022
+            </p>
         </div>
     {% endfor %}
+
+    <!-- Divider-->
+    <hr class="my-4" />
+    <!-- Pager-->
+    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Mais
+            Posts →</a></div>
+
 {% endblock content %}
