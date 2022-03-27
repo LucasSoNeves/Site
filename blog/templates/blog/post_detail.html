@@ -10,8 +10,14 @@
         {% endif %}
         <div class="post-entry">
             <h2>{{ object.title }}</h2>
-            <p> {{ object.content }} </p>
+            <p> {{ object.content|safe }} </p>
         </div>
-        <a href="{{ object.get_absolute_url_update }}">+ Editar Postagem do Blog </a><br>
-        <a href="{{ object.get_absolute_url_delete }}"> Deletar Postagem do Blog </a>
+        {% if request.user.is_authenticated %}
+       <div class="card">
+        <div class="card-body">
+            <a href="{{ object.get_absolute_url_update }}" class="btn btn-primary">Editar Postagem do Blog </a>
+            <a href="{{ object.get_absolute_url_delete }}" class="btn btn-danger"> Deletar Postagem do Blog </a>
+        </div>
+    </div>
+    {% endif %}
 {% endblock content %}
