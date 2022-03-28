@@ -33,10 +33,10 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-2 py-2 py-lg-3" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-2 py-2 py-lg-3" href="contact.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-2 py-2 py-lg-3" href="contact">Contato</a></li>
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link px-lg-2 py-2 py-lg-3" href="{% url 'post_new' %}">+ Nova Postagem no Site</a>
+                            <a class="nav-link px-lg-2 py-2 py-lg-3" href="{% url 'post_new' %}"> Nova Postagem no Site</a>
                         </li>
                         <li class="nav-item"><a class="nav-link px-lg-2 py-2 py-lg-3" href="{% url 'logout' %}">logout</a></li>
                     {% else %}

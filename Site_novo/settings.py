@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'blog',
     'accounts',
     'social',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +141,11 @@ STATICFILES_DIRS = [
 
 STATIC_URL = '/staticfiles/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '5000b292034dd3'
+EMAIL_HOST_PASSWORD = '5202a9f1482d4f'
+EMAIL_PORT = '2525'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.consle.EmailBackend'
