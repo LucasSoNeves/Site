@@ -16,4 +16,3 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Site_novo.settings')
 
 application = Cling(get_wsgi_application())
 
-web: gunicorn Site_novo

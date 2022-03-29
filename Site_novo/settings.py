@@ -15,7 +15,6 @@ import os
 from decouple import config
 from pathlib import Path
 from dj_database_url import parse as dburl
-import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -145,7 +144,5 @@ EMAIL_HOST_USER = '5000b292034dd3'
 EMAIL_HOST_PASSWORD = '5202a9f1482d4f'
 EMAIL_PORT = '2525'
 
-
-django_heroku.settings(locals())
 
 #EMAIL_BACKEND = 'django.core.mail.backends.consle.EmailBackend'
